@@ -15,7 +15,7 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI defineOpenApi() {
         Server server = new Server();
-        server.setUrl("http://localhost:8080");
+        server.setUrl("https://gtav-api-production.up.railway.app");
         server.setDescription("GTA V API Server");
 
         Contact myContact = new Contact();
