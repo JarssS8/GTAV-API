@@ -38,6 +38,10 @@ public class CarOnSaleService {
         return carsOnSaleDto;
     }
 
+    public void deleteAllCars() {
+        carOnSaleRepository.deleteAll();
+    }
+
     public void saveCar(CarOnSale carOnSale) {
         carOnSaleRepository.save(carOnSale);
     }

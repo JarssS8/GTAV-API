@@ -25,6 +25,8 @@ public class WebScrapingService {
     public void scrape() {
         HashMap<String, String> cars = new HashMap<>();
         try {
+            // Remove all cars from the database
+            carOnSaleService.deleteAllCars();
 //           Download the HTML from a URL
             String urlCars = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR0gTmBAmgYgvBZgeZlmG1y3flRvo-VEbviUODaIhUcsH_UkvCvTyigIHtn-OO-GZGq4zIOh8cv9KCI/pubhtml?gid=426913559";
             Document docCars = Jsoup.connect(urlCars).get();
